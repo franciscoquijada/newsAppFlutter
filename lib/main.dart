@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/src/pages/tabs_page.dart';
 import 'package:newsapp/src/theme/theme.dart';
 
 void main() {
@@ -13,19 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: myTheme,
-      home: PageView(
-        physics: BouncingScrollPhysics(),
-        children: <Widget>[
-          Container(
-            color: Colors.amber,
-            child: Center(child: Text('Pagina 1')),
-          ),
-          Container(
-            color: Colors.green,
-            child: Center(child: Text('Pagina 2')),
-          )
-        ],
-      ),
+      home: TabsPage(),
     );
   }
 }
