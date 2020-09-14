@@ -33,7 +33,6 @@ class _Paginas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final navegacionModel = Provider.of<_NavegacionModel>(context);
-
     return PageView(
       controller: navegacionModel.pageController,
       //physics: BouncingScrollPhysics(),
