@@ -4,7 +4,7 @@ import 'package:newsapp/src/models/article_model.dart';
 class ListNews extends StatelessWidget {
   final List<Article> news;
   const ListNews(this.news);
-
+  //
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
