@@ -32,7 +32,51 @@ class _New extends StatelessWidget {
         ),
         _CardTitle(singleNew: singleNew),
         _CardImage(singleNew: singleNew),
+        _CardDescription(singleNew: singleNew),
+        _CardFooter(singleNew: singleNew),
+        Divider(color: Colors.white),
       ],
+    );
+  }
+}
+
+class _CardFooter extends StatelessWidget {
+  final Article singleNew;
+  _CardFooter({this.singleNew});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          RaisedButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+              side: BorderSide(color: Colors.black),
+            ),
+            colorBrightness: Brightness.dark,
+            splashColor: Colors.amber,
+            elevation: 6.0,
+            color: Colors.red,
+            child: Icon(Icons.add_circle_outline),
+            onPressed: () => print("Button Pressed"),
+            //onPressed: ,
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class _CardDescription extends StatelessWidget {
+  final Article singleNew;
+  _CardDescription({this.singleNew});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 15),
+      margin: EdgeInsets.symmetric(vertical: 10),
+      child: Text('${singleNew.description}'),
     );
   }
 }
@@ -44,10 +88,21 @@ class _CardImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: 10),
+      margin: EdgeInsets.symmetric(vertical: 10),
       child: singleNew.urlToImage != null
-          ? FadeInImage(
-              placeholder: AssetImage('assets/img/giphy.gif'),
-              image: NetworkImage(singleNew.urlToImage))
+          ? ClipRRect(
+              borderRadius: BorderRadius.circular(15.0),
+              child: FadeInImage(
+                  /*imageErrorBuilder: (BuildContext context, Object exception,
+                      StackTrace stackTrace) {
+                    return Container(
+                      child: Image.asset('assets/img/no-image.png'),
+                    );
+                  },*/
+                  placeholder: AssetImage('assets/img/giphy.gif'),
+                  image: NetworkImage(singleNew.urlToImage)),
+            )
           : Image(
               image: AssetImage('assets/img/no-image.png'),
             ),

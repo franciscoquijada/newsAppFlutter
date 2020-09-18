@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/src/pages/tabs1_page.dart';
+import 'package:newsapp/src/pages/tabs2_page.dart';
 import 'package:provider/provider.dart';
 
 class TabsPage extends StatelessWidget {
@@ -8,7 +9,7 @@ class TabsPage extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => _NavegacionModel(),
       child: Scaffold(
-        body: _Paginas(),
+        body: _Pages(),
         bottomNavigationBar: _Navegacion(),
       ),
     );
@@ -30,7 +31,7 @@ class _Navegacion extends StatelessWidget {
   }
 }
 
-class _Paginas extends StatelessWidget {
+class _Pages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final navegacionModel = Provider.of<_NavegacionModel>(context);
@@ -40,10 +41,7 @@ class _Paginas extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       children: <Widget>[
         Tabs1Page(),
-        Container(
-          color: Colors.green,
-          child: Center(child: Text('Pagina 2')),
-        )
+        Tabs2Page(),
       ],
     );
   }
