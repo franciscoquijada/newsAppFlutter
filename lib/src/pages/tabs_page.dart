@@ -27,7 +27,7 @@ class _Navegacion extends StatelessWidget {
           BottomNavigationBarItem(
               icon: Icon(Icons.accessibility), title: Text("Noticias")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.adb), title: Text("Noticias por Seccion"))
+              icon: Icon(Icons.adb), title: Text("Noticias Clasificadas"))
         ]);
   }
 }
