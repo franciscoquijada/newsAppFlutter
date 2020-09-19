@@ -1,4 +1,4 @@
-# News app Flutter
+# News from Venezuela app Flutter
 
 A flutter aplication for show news from Venezuela, using the api: https://newsapi.org/ . Following the course of Fernando Herrera
 
