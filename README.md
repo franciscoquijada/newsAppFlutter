@@ -1,7 +1,7 @@
 # News app Flutter
 
-A flutter aplication for show news, using the api: https://newsapi.org/
+A flutter aplication for show news from Venezuela, using the api: https://newsapi.org/ . Following the course of Fernando Herrera
 
-<img src="https://i.ibb.co/pJndBYX/Screenshot-10.png" alt="Screenshot-10" border="0">
+<img src="https://i.ibb.co/qWzm2QZ/Screenshot-13.png" alt="Screenshot-13" border="0">
 
-<img src="https://i.ibb.co/brdvsFb/Screenshot-12.png" alt="Screenshot-12" border="0">
+<img src="https://i.ibb.co/1dRyk8L/Screenshot-14.png" alt="Screenshot-14" border="0">
