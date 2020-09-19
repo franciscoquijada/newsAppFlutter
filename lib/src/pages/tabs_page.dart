@@ -25,8 +25,9 @@ class _Navegacion extends StatelessWidget {
         onTap: (i) => navegacionModel.paginaActual = i,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.accessibility), title: Text("Menu 1")),
-          BottomNavigationBarItem(icon: Icon(Icons.adb), title: Text("Menu 2"))
+              icon: Icon(Icons.accessibility), title: Text("Noticias")),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.adb), title: Text("Noticias por Seccion"))
         ]);
   }
 }

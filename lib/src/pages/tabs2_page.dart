@@ -1,16 +1,25 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapp/src/models/category_model.dart';
 import 'package:newsapp/src/services/news_service.dart';
+import 'package:newsapp/src/widgets/listNews.dart';
 import 'package:provider/provider.dart';
 
 class Tabs2Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final newsService = Provider.of<NewsService>(context);
+    newsService.selectedCategory = newsService.selectedCategory;
     return SafeArea(
       child: Scaffold(
           body: Column(
         children: <Widget>[
+          //Mostrar botones de las categorias
           _ListCategories(),
+          //Mostrar noticias
+          Expanded(
+              child: Center(
+                  child: ListNews(newsService.getArticleCategorySelected)))
         ],
       )),
     );
@@ -24,7 +33,7 @@ class _ListCategories extends StatelessWidget {
         Provider.of<NewsService>(context).categories;
     return Container(
       width: double.infinity,
-      height: 110,
+      height: 90,
       child: ListView.builder(
           physics: BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,

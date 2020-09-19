@@ -33,6 +33,11 @@ class NewsService extends ChangeNotifier {
 
   get selectedColorIcon => this._selectedColorIcon;
 
+  List<Article> get getArticleCategorySelected {
+    debugPrint(' Selected category $_selectedCategory');
+    return this.categoryArticles[this._selectedCategory];
+  }
+
   set selectedCategory(String category) {
     this._selectedCategory = category;
     this.getArticlesByCategory(category);
@@ -54,8 +59,10 @@ class NewsService extends ChangeNotifier {
   }
 
   getArticlesByCategory(String category) async {
-    if (this.categoryArticles[category].length > 0)
+    if (this.categoryArticles[category].length > 0) {
       return this.categoryArticles[category];
+    }
+
     //Contruyo la url
     final String url =
         '$urlNews$topHeadlines?country=ve&apiKey=$apiKey&languaje=es&category=$category';
