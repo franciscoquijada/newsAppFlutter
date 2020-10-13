@@ -33,7 +33,7 @@ class _ListCategories extends StatelessWidget {
         Provider.of<NewsService>(context).categories;
     return Container(
       width: double.infinity,
-      height: 90,
+      height: 91,
       child: ListView.builder(
           physics: BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
