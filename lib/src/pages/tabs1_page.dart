@@ -8,8 +8,7 @@ class Tabs1Page extends StatefulWidget {
   _Tabs1PageState createState() => _Tabs1PageState();
 }
 
-class _Tabs1PageState extends State<Tabs1Page>
-    with AutomaticKeepAliveClientMixin {
+class _Tabs1PageState extends State<Tabs1Page> {
   @override
   Widget build(BuildContext context) {
     final headlines = Provider.of<NewsService>(context).headlines;
